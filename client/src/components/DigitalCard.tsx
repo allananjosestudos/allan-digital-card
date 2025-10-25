@@ -99,8 +99,8 @@ export default function DigitalCard() {
               {/* QR Code */}
               <div className="flex flex-col items-center justify-center">
                 <div className="bg-white p-4 rounded-lg border border-border mb-4">
-                  <img 
-                    src="/qrcode_linkedin.png" 
+                  <img
+                    src={qrLinkedin}
                     alt="LinkedIn QR Code" 
                     className="w-32 h-32 sm:w-40 sm:h-40"
                   />
@@ -149,13 +149,13 @@ export default function DigitalCard() {
                 <div className="space-y-2 text-sm">
                   <p className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-accent" />
-                    <a className="hover:text-accent transition-colors" href={`mailto:${contactInfo.email}`}>
+                    <a href={`mailto:${contactInfo.email}`} className="hover:text-accent transition-colors">
                       {contactInfo.email}
                     </a>
                   </p>
                   <p className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-accent" />
-                    <a className="hover:text-accent transition-colors" href={`tel:${contactInfo.phone.replace(/\D/g, '')}`}>
+                    <a href={`tel:${contactInfo.phone.replace(/\D/g, '')}`} className="hover:text-accent transition-colors">
                       {contactInfo.phone}
                     </a>
                   </p>
@@ -191,7 +191,7 @@ export default function DigitalCard() {
               <h2 className="text-xl font-bold text-foreground mb-4">Certificações</h2>
               <ul className="space-y-2">
                 {professional.certifications.map((cert, idx) => (
-                  <li className="flex items-start gap-3" key={idx}>
+                  <li key={idx} className="flex items-start gap-3">
                     <span className="text-accent mt-1">✓</span>
                     <span className="text-sm sm:text-base text-muted-foreground">{cert}</span>
                   </li>
@@ -204,7 +204,7 @@ export default function DigitalCard() {
               <h2 className="text-xl font-bold text-foreground mb-4">Projetos de Destaque</h2>
               <ul className="space-y-2">
                 {professional.projects.map((project, idx) => (
-                  <li className="flex items-start gap-3" key={idx}>
+                  <li key={idx} className="flex items-start gap-3">
                     <span className="text-accent mt-1">▸</span>
                     <span className="text-sm sm:text-base text-muted-foreground">{project}</span>
                   </li>
@@ -217,7 +217,7 @@ export default function DigitalCard() {
               <h2 className="text-xl font-bold text-foreground mb-4">Idiomas</h2>
               <div className="flex flex-wrap gap-3">
                 {professional.languages.map((lang, idx) => (
-                  <span className="text-sm sm:text-base text-muted-foreground" key={idx}>
+                  <span key={idx} className="text-sm sm:text-base text-muted-foreground">
                     {lang}
                   </span>
                 ))}
