@@ -23,7 +23,8 @@ export default function DigitalCard() {
     ],
     certifications: [
       "Analista SOC (IBSEC IC-SOC-380)",
-      "Segurança em Linux (IBSEC IC-LNX-1180)"
+      "Segurança em Linux (IBSEC IC-LNX-1180)",
+      "Boas Práticas de Cibersegurança"
     ],
     projects: [
       "Sistema de Automação de Processos de TI — Grupo MiniPreço (Power Automate, Microsoft 365, APIs)"
