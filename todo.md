@@ -18,5 +18,5 @@
 - [x] Efeitos de hover e animações sutis
 - [x] Linhas geométricas finas e iluminação azul suave
 - [x] Responsividade para smartphones e desktops
-- [ ] Hospedagem no GitHub Pages
+- [x] Hospedagem no GitHub Pages
 
