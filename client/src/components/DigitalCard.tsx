@@ -1,4 +1,5 @@
 import { Mail, Phone, Linkedin, Github, Instagram, ExternalLink } from 'lucide-react';
+import qrLinkedin from '@/assets/qrcode_linkedin.png';
 
 export default function DigitalCard() {
   const contactInfo = {
@@ -47,10 +48,10 @@ export default function DigitalCard() {
         {/* Main Card Container */}
         <div className="relative overflow-hidden rounded-lg border border-border bg-card shadow-2xl">
           {/* Decorative gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent pointer-events-none"></div>
           
           {/* Top accent line */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent/50 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent/50 to-transparent"></div>
 
           <div className="relative z-10 p-6 sm:p-8 lg:p-10">
             {/* Header Section */}
@@ -148,13 +149,13 @@ export default function DigitalCard() {
                 <div className="space-y-2 text-sm">
                   <p className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-accent" />
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-accent transition-colors">
+                    <a className="hover:text-accent transition-colors" href={`mailto:${contactInfo.email}`}>
                       {contactInfo.email}
                     </a>
                   </p>
                   <p className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-accent" />
-                    <a href={`tel:${contactInfo.phone.replace(/\D/g, '')}`} className="hover:text-accent transition-colors">
+                    <a className="hover:text-accent transition-colors" href={`tel:${contactInfo.phone.replace(/\D/g, '')}`}>
                       {contactInfo.phone}
                     </a>
                   </p>
@@ -190,7 +191,7 @@ export default function DigitalCard() {
               <h2 className="text-xl font-bold text-foreground mb-4">Certificações</h2>
               <ul className="space-y-2">
                 {professional.certifications.map((cert, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
+                  <li className="flex items-start gap-3" key={idx}>
                     <span className="text-accent mt-1">✓</span>
                     <span className="text-sm sm:text-base text-muted-foreground">{cert}</span>
                   </li>
@@ -203,7 +204,7 @@ export default function DigitalCard() {
               <h2 className="text-xl font-bold text-foreground mb-4">Projetos de Destaque</h2>
               <ul className="space-y-2">
                 {professional.projects.map((project, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
+                  <li className="flex items-start gap-3" key={idx}>
                     <span className="text-accent mt-1">▸</span>
                     <span className="text-sm sm:text-base text-muted-foreground">{project}</span>
                   </li>
@@ -216,7 +217,7 @@ export default function DigitalCard() {
               <h2 className="text-xl font-bold text-foreground mb-4">Idiomas</h2>
               <div className="flex flex-wrap gap-3">
                 {professional.languages.map((lang, idx) => (
-                  <span key={idx} className="text-sm sm:text-base text-muted-foreground">
+                  <span className="text-sm sm:text-base text-muted-foreground" key={idx}>
                     {lang}
                   </span>
                 ))}
@@ -240,15 +241,14 @@ export default function DigitalCard() {
           </div>
 
           {/* Bottom accent line */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/50 to-accent" />
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/50 to-accent"></div>
         </div>
 
         {/* Footer */}
         <div className="mt-8 text-center text-xs text-muted-foreground">
-          <p>© 2024 Allan Felipe dos Anjos. Todos os direitos reservados.</p>
+          © 2024 Allan Felipe dos Anjos. Todos os direitos reservados.
         </div>
       </div>
     </div>
   );
 }
-
